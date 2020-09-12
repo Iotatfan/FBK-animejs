@@ -1,16 +1,14 @@
-const allPaths = document.querySelectorAll('path');
-const fubuki = document.querySelectorAll('.st1')
-const fubukiPatth = document.querySelector('#fubuki path')
-const blurs = document.querySelectorAll('.blur');
+const fubuki = document.querySelectorAll('.hide')
+const names = document.querySelectorAll('#fubuki-text path:not(.inner-box)')
 
 fubuki.forEach((part) => {
     part.style.opacity = 0
-    part.setAttribute('stroke', '#8FCCC9')
-    part.setAttribute('stroke-width', 0.1)
-    part.setAttribute('fill', '#FFFFFF')
 })
 
-// fubuki.style.bottom = '-100%'
+names.forEach((name) => {
+    name.setAttribute('stroke', '#000000')
+    name.setAttribute('stroke-width', 1)
+})
 
 document.querySelectorAll('svg').forEach((svg) => {
 	svg.style.display = 'block';
@@ -23,21 +21,20 @@ anime.timeline({
 }).add({
     targets: fubuki,
     opacity: 1,
-    fill: '#8FCCC9',
-    // duration: 1200,
-    delay: anime.stagger(50, {
-        // easing: 'easeInBounce',
+    delay: anime.stagger(5, {
         from: 'center'
     }),
-    // easing: 'easeInSine',
     complete: function() {
-        console.log('FBK Show')
+        console.log('Show Fubuki')
     }
 }).add({
-    targets: fubuki,
-    duration: 1000,
-    // translateX: 500,
+    targets: names,
+    strokeDashoffset: [anime.setDashoffset, 0],
+    fill: '#000',
+    duration: 2000,
+    easing: 'easeInOutSine',
+    delay: anime.stagger(100),
     complete: function() {
-        console.log('FBK Translate')
+        console.log('Show Text')
     }
 })

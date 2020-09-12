@@ -13,28 +13,29 @@ body {
     padding: 0;
 }
 
-/* svg {
+svg {
 	display: none;
-} */
+}
 
-#fubuki{
+#fubuki {
     position: absolute;
     width: 100vw;
     height: 100vh;
 }
 
-.blur {
-	opacity: 0;
-	/* filter: url(#dropshadow); */
+#fubuki-text {
+    fill: white;
+    width: 100vw;
+    height: 100vh;
 }
 
-.st0{fill:#FEFEFE;}
-/* .st1{
-    fill:#8FCCC9;
+.hide {
+    opacity: 0;
+}
+
+.inner-box {
     fill: white;
-    opacity: 1;
-} */
-.st2{fill:#FCFCFC;}
+}
 
 @keyframes line-anim {
 	to {
