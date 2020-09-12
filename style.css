@@ -7,7 +7,7 @@
 body {
 	width: 100vw;
 	height: 100vh;
-    background: white;
+    background:'#E4E3E3';
     background-size: cover;
     overflow: hidden;
     padding: 0;
@@ -35,19 +35,4 @@ svg {
 
 .inner-box {
     fill: white;
-}
-
-@keyframes line-anim {
-	to {
-		stroke-dashoffset: 0;
-	}
-}
-
-@keyframes fade-in-anim {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
 }
