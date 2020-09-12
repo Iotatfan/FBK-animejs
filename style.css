@@ -7,7 +7,7 @@
 body {
 	width: 100vw;
 	height: 100vh;
-    background:'#E4E3E3';
+    background: rgb(180, 195, 220);
     background-size: cover;
     overflow: hidden;
     padding: 0;
@@ -19,12 +19,13 @@ svg {
 
 #fubuki {
     position: absolute;
+    fill: rgb(180, 195, 220);
     width: 100vw;
     height: 100vh;
 }
 
 #fubuki-text {
-    fill: white;
+    fill: rgb(180, 195, 220);
     width: 100vw;
     height: 100vh;
 }
@@ -34,5 +35,5 @@ svg {
 }
 
 .inner-box {
-    fill: white;
+    fill: rgb(180, 195, 220);
 }
